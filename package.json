@@ -1,0 +1,23 @@
+{
+  "name": "beer-api",
+  "version": "1.0.0",
+  "description": "Beer API with tests",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "NODE_ENV=TEST mocha --timeout 2000"
+  },
+  "author": "Bruno Bandeira",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0"
+  }
+}

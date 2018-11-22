@@ -7,8 +7,6 @@ const bodyParser = require('koa-bodyparser');
 const logger = require('koa-logger');
 
 const schema = require('./api/schema');
-// const indexRoutes = require('./routes/index');
-// const beerRoutes = require('./routes/beers');
 
 const app = new Koa();
 const router = new Router();
@@ -21,9 +19,6 @@ router.all('/api', graphqlHTTP({
     schema,
     graphiql: true
 }));
-
-// app.use(indexRoutes.routes());
-// app.use(beerRoutes.routes());
 
 app.use(router.routes()).use(router.allowedMethods());
 

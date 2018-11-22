@@ -2,18 +2,18 @@ const db = require('../config/database')
 
 module.exports = {
     Query: {
-        // async getCategories() {
-        //     return await db('categories')
-        // },
-        // async getCategory(_, { id }) {
-        //     return await db('categories').where({ id }).first()
-        // },
-        // async getStyles() {
-        //     return await db('styles')
-        // },
-        // async getStyle(_, { id }) {
-        //     return await db('styles').where({ id }).first()
-        // },
+        async getCategories() {
+            return await db('categories')
+        },
+        async getCategory(_, { id }) {
+            return await db('categories').where({ id }).first()
+        },
+        async getStyles() {
+            return await db('styles')
+        },
+        async getStyle(_, { id }) {
+            return await db('styles').where({ id }).first()
+        },
         async getBeer(_, { id }) {
             return await db('beers').where({ id }).first()
         },
